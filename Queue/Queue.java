@@ -16,7 +16,7 @@ public class Queue {
             return queueList.removeFirst();
         } else {
             System.out.println("Queue is empty. Cannot dequeue.");
-            return -1;  // Return a default value
+            return -1; // Return a default value
         }
     }
 
@@ -25,7 +25,7 @@ public class Queue {
             return queueList.getFirst();
         } else {
             System.out.println("Queue is empty. Cannot peek.");
-            return -1;  // Return a default value
+            return -1; // Return a default value
         }
     }
 
@@ -34,4 +34,22 @@ public class Queue {
     }
 
     public int size() {
-        return
+        return queueList.size();
+    }
+
+    public static void main(String[] args) {
+        Queue queue = new Queue();
+
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+
+        System.out.println("Queue size: " + queue.size());
+        System.out.println("Front of the queue: " + queue.peek());
+
+        System.out.println("Dequeued item: " + queue.dequeue());
+        System.out.println("Dequeued item: " + queue.dequeue());
+
+        System.out.println("Is queue empty? " + queue.isEmpty());
+    }
+}
