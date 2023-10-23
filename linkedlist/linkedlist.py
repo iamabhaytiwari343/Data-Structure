@@ -1,13 +1,15 @@
 class Node:
+    # node constructor 
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
 class LinkedList:
+    # linked list constructor
     def __init__(self):
         self.head = None
-
+    # inserting a new node into a linked list
     def insert(self, value):
         new_node = Node(value)
         if self.head is None:
@@ -40,6 +42,8 @@ class LinkedList:
             print(current.data, end=" ")
             current = current.next
         print()
+
+
 
 
 if __name__ == "__main__":
